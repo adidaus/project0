@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <title>Search</title>
+    </head>
+    <style>
+        * {
+            box-sizing: border-box;
+        }
+        html {
+            height: 100%;
+        }
+        body {
+            height: 100%;
+            margin: 0;
+            padding: 0;
+            font-family: sans-serif;
+        }
+        .container {
+            display: flex;
+        }
+        .column {
+            flex-direction: column;
+        }
+        .center {
+            justify-content: center;
+            align-items: center;
+        }
+        .right {
+            justify-content: flex-end;
+        }
+        .spread {
+            justify-content: space-between;
+        }
+        nav ul {
+            margin-right: 30px;
+            margin-top: 30px;
+        }
+        nav li {
+            display: inline;
+            margin-right: 20px;
+        }
+        nav a {
+            text-decoration: none;
+        }
+        nav a:hover {
+            font-weight: bold;
+        }
+        form {
+            padding: 10px;
+        }
+        input {
+            margin: 5px;
+        }
+        #searchBar {
+            border: thin solid;
+            border-radius: 30px;
+            padding: 5px 10px;
+        }
+        #search {
+            height: 34px;
+            font-size: 16px;
+            border: none;
+            min-width: 500px;
+        }
+        #search:focus {
+            outline-width: 0;
+        }
+        #searchBtn {
+            width: fit-content;
+            margin-top: 15px;
+            font-size: large;
+            padding: 5px;
+            border: none;
+            cursor: pointer;
+        }
+        footer {
+            text-align: center;
+            background-color: aliceblue;
+        }
+    </style>
+    <body class="container column spread">
+        <header>
+            <nav class="container right">
+                <ul>
+                    <li><a href="/image.html">Image Search</a></li>
+                    <li><a href="/adv.html">Advanced Search</a></li>
+                </ul>
+            </nav>
+        </header>
+        <main class="container column center">
+            <img src="logo.png" alt="logo">
+            <form action="https://www.google.com/search" class="container column center">
+                <div id="searchBar">
+                <input type="text" name="q" id="search">
+                </div>
+                <input type="submit" value="Google Search" id="searchBtn">
+            </form>
+        </main>
+        <footer>
+            <p>Ini Footer</p>
+        </footer>
+    </body>
+</html>
